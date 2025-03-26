@@ -10,14 +10,14 @@ interface LayoutProps {
   description?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ 
-  children, 
-  title = 'WorkIt - Rent What You Need',
-  description = 'WorkIt is a platform for renting items from people near you.'
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  title = 'Share-n-Rent - Rent What You Need',
+  description = 'Share-n-Rent is a platform for renting items from people near you.'
 }) => {
   const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-  
+
   // Mock unread message count - in a real app, this would come from an API
   const unreadMessageCount = 2;
 
@@ -25,9 +25,9 @@ const Layout: React.FC<LayoutProps> = ({
     { label: 'Home', href: '/', icon: <FiHome className="w-5 h-5" /> },
     { label: 'Explore', href: '/search', icon: <FiSearch className="w-5 h-5" /> },
     { label: 'Create', href: '/create', icon: <FiPlusSquare className="w-5 h-5" /> },
-    { 
-      label: 'Messages', 
-      href: '/messages', 
+    {
+      label: 'Messages',
+      href: '/messages',
       icon: <FiMessageCircle className="w-5 h-5" />,
       showBadge: unreadMessageCount > 0,
       badgeCount: unreadMessageCount
@@ -49,7 +49,7 @@ const Layout: React.FC<LayoutProps> = ({
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      
+
       <div className="min-h-screen bg-gray-50 flex flex-col">
         {/* Header */}
         <header className="bg-white shadow-sm sticky top-0 z-10">
@@ -60,7 +60,7 @@ const Layout: React.FC<LayoutProps> = ({
                   <span className="text-indigo-600 font-bold text-xl">Share-N-Rent</span>
                 </Link>
               </div>
-              
+
               <div className="hidden md:flex md:items-center md:space-x-6">
                 {navItems.map((item) => (
                   <Link
@@ -74,7 +74,7 @@ const Layout: React.FC<LayoutProps> = ({
                   >
                     {item.icon}
                     <span className="ml-2">{item.label}</span>
-                    
+
                     {item.showBadge && (
                       <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                         {item.badgeCount}
@@ -83,7 +83,7 @@ const Layout: React.FC<LayoutProps> = ({
                   </Link>
                 ))}
               </div>
-              
+
               <div className="flex items-center md:hidden">
                 <button
                   type="button"
@@ -96,7 +96,7 @@ const Layout: React.FC<LayoutProps> = ({
               </div>
             </div>
           </div>
-          
+
           {/* Mobile menu */}
           {isMobileMenuOpen && (
             <div className="md:hidden">
@@ -114,7 +114,7 @@ const Layout: React.FC<LayoutProps> = ({
                   >
                     {item.icon}
                     <span className="ml-3">{item.label}</span>
-                    
+
                     {item.showBadge && (
                       <span className="ml-auto bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                         {item.badgeCount}
@@ -126,12 +126,12 @@ const Layout: React.FC<LayoutProps> = ({
             </div>
           )}
         </header>
-        
+
         {/* Main content */}
         <main className="flex-1 py-6">
           {children}
         </main>
-        
+
         {/* Footer */}
         <footer className="bg-white border-t border-gray-200 py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -161,4 +161,4 @@ const Layout: React.FC<LayoutProps> = ({
   );
 };
 
-export default Layout; 
+export default Layout;

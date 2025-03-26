@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WorkIt - Login",
-  description: "Sign in to your WorkIt account",
+  title: "Share-n-Rent - Login",
+  description: "Sign in to your Share-n-Rent account",
 };
 
 export default function LoginLayout({
@@ -23,4 +23,4 @@ export default function LoginLayout({
   children: React.ReactNode;
 }>) {
   return children;
-} 
+}

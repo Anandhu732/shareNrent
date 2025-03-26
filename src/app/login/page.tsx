@@ -11,7 +11,7 @@ import Image from 'next/image';
 export default function LoginPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get('callbackUrl') || '/dashboard';
+  const callbackUrl = searchParams?.get('callbackUrl') || '/dashboard';
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -29,21 +29,27 @@ export default function LoginPage() {
     }
   };
 
-  const handleEmailPasswordSignIn = async (e) => {
+  interface SignInResult {
+    error?: string|null;
+  }
+
+  interface HandleEmailPasswordSignInEvent extends React.FormEvent<HTMLFormElement> {}
+
+  const handleEmailPasswordSignIn = async (e: HandleEmailPasswordSignInEvent): Promise<void> => {
     e.preventDefault();
     if (!email || !password) {
       setError('Email and password are required');
       return;
     }
-    
+
     setIsLoading(true);
     try {
-      const result = await signIn('credentials', {
+      const result: SignInResult | undefined = await signIn('credentials', {
         redirect: false,
         email,
         password,
       });
-      
+
       if (result?.error) {
         setError('Invalid email or password');
       } else {
@@ -177,7 +183,7 @@ export default function LoginPage() {
                 </button>
               </div>
             </form>
-            
+
             <div className="text-center mt-4">
               <Link href="/welcome" className="text-sm text-gray-600 hover:text-indigo-500">
                 Back to home
@@ -188,4 +194,4 @@ export default function LoginPage() {
       </div>
     </div>
   );
-} 
+}
