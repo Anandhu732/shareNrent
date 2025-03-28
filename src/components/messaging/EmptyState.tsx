@@ -9,7 +9,7 @@ interface EmptyStateProps {
 }
 
 const EmptyState: React.FC<EmptyStateProps> = ({ type, itemId, itemName }) => {
-  let icon = <FiMessageCircle className="h-10 w-10 text-indigo-600" />;
+  const icon = <FiMessageCircle className="h-10 w-10 text-indigo-600" />;
   let title = '';
   let description = '';
   let action = null;

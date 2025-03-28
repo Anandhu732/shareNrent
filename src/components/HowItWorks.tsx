@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 const steps = [
@@ -80,6 +79,12 @@ const HowItWorks = () => {
           <Link href="/how-it-works" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200">
             Learn More
           </Link>
+        </div>
+
+        <div className="mt-16 text-center">
+          <p className="text-gray-600 italic">
+            &quot;I saved over $500 by renting a professional camera for my daughter&apos;s graduation instead of buying one. The process was smooth and the owner was very helpful.&quot;
+          </p>
         </div>
       </div>
     </section>
