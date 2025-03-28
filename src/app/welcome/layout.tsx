@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WorkIt - Rent Items Near You",
+  title: "Share-N-Rent- Rent Items Near You",
   description: "Rent items from people in your community or list your own items to rent out.",
 };
 
@@ -23,4 +23,4 @@ export default function WelcomeLayout({
   children: React.ReactNode;
 }>) {
   return children;
-} 
+}

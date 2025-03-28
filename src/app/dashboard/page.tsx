@@ -159,7 +159,7 @@ export default function DashboardPage() {
       >
         <div className="flex items-center justify-between h-16 px-6 border-b border-gray-200">
           <Link href="/dashboard" className="flex items-center">
-            <span className="text-xl font-bold text-indigo-600">WorkIt</span>
+            <span className="text-xl font-bold text-indigo-600">share-n-rent</span>
           </Link>
           <button 
             onClick={() => setIsSidebarOpen(false)}

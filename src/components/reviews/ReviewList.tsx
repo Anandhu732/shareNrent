@@ -17,7 +17,6 @@ interface ReviewListProps {
   reviews: Review[];
   averageRating: number;
   totalReviews: number;
-  itemId?: number;
   isOwner?: boolean;
 }
 
@@ -25,7 +24,6 @@ export default function ReviewList({
   reviews, 
   averageRating, 
   totalReviews, 
-  itemId,
   isOwner = false 
 }: ReviewListProps) {
   const [sortBy, setSortBy] = useState<'newest' | 'highest' | 'lowest'>('newest');

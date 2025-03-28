@@ -18,7 +18,7 @@ export default function WelcomePage() {
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-1">
           <div className="flex justify-center mb-8">
-            <span className="text-4xl font-bold text-indigo-600">WorkIt</span>
+            <span className="text-4xl font-bold text-indigo-600">share-n-rent</span>
           </div>
           
           <div className="max-w-4xl mx-auto text-center">

@@ -65,7 +65,7 @@ export default function RegisterPage() {
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Link href="/">
           <div className="flex justify-center">
-            <span className="text-3xl font-bold text-indigo-600">WorkIt</span>
+            <span className="text-3xl font-bold text-indigo-600">share-n-rent</span>
           </div>
         </Link>
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">

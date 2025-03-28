@@ -1,4 +1,4 @@
-# WorkIt - Item Rental Platform
+# share-n-rent - Item Rental Platform
 
 Share-N-Rent is a modern web application that allows users to rent items from people in their community. It helps users save money and reduce waste by enabling a sharing economy.
 

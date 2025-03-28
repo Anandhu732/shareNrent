@@ -4,7 +4,6 @@ import { useState } from 'react';
 import StarRating from './StarRating';
 
 interface ReviewFormProps {
-  itemId: number;
   itemName: string;
   onSubmit: (review: {
     rating: number;
@@ -14,7 +13,6 @@ interface ReviewFormProps {
 }
 
 export default function ReviewForm({ 
-  itemId, 
   itemName, 
   onSubmit, 
   onCancel 

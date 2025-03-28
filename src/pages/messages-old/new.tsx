@@ -8,7 +8,20 @@ import MessageInput from '@/components/messaging/MessageInput';
 import EmptyState from '@/components/messaging/EmptyState';
 
 // Mock data for development
-const mockUsers: { [key: string]: any } = {
+interface User {
+  id: string;
+  name: string;
+  image: string;
+  isOnline: boolean;
+  lastActive?: Date;
+}
+
+interface Item {
+  id: string;
+  name: string;
+}
+
+const mockUsers: { [key: string]: User } = {
   'user1': {
     id: 'user1',
     name: 'John Smith',
@@ -24,7 +37,7 @@ const mockUsers: { [key: string]: any } = {
   },
 };
 
-const mockItems: { [key: string]: any } = {
+const mockItems: { [key: string]: Item } = {
   'item1': {
     id: 'item1',
     name: 'DSLR Camera',
@@ -43,8 +56,8 @@ const NewMessagePage: NextPage = () => {
   const router = useRouter();
   const { recipient, item: itemId } = router.query;
   
-  const [recipientUser, setRecipientUser] = useState<any>(null);
-  const [item, setItem] = useState<any>(null);
+  const [recipientUser, setRecipientUser] = useState<User | null>(null);
+  const [item, setItem] = useState<Item | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   // Simulate fetching data
@@ -94,7 +107,7 @@ const NewMessagePage: NextPage = () => {
           <div className="bg-white rounded-lg shadow-md p-6">
             <h2 className="text-xl font-semibold text-red-500 mb-2">User not found</h2>
             <p className="text-gray-600">
-              The user you're trying to message could not be found. Please check the URL and try again.
+              The user you&apos;re trying to message could not be found. Please check the URL and try again.
             </p>
           </div>
         </div>
@@ -105,7 +118,7 @@ const NewMessagePage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>New Message | WorkIt</title>
+        <title>New Message | share-n-rent</title>
         <meta name="description" content="Start a new conversation" />
       </Head>
       

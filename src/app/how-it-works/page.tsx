@@ -5,7 +5,7 @@ export default function HowItWorksPage() {
   return (
     <div className="py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">How WorkIt Works</h1>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">How share-n-rent Works</h1>
         <HowItWorks />
         
         <div className="mt-8 max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">

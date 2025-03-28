@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/dashboard" className="flex-shrink-0 flex items-center">
-              <span className="text-xl font-bold text-indigo-600">WorkIt</span>
+              <span className="text-xl font-bold text-indigo-600">share-n-rent</span>
             </Link>
             <div className="hidden sm:ml-8 sm:flex sm:space-x-8">
               <Link href="/browse" className="border-transparent text-gray-700 hover:text-indigo-600 hover:border-indigo-600 inline-flex items-center px-1 pt-1 border-b-2 text-base font-medium transition-colors">
